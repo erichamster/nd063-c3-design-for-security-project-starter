@@ -1,0 +1,46 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+### Example vulnerability
+
+##Scan AMI’s or containers for OS vulnerabilities
+
+### Example vulnerability
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+
+### Example vulnerability
+
+================================== Answer ==================================
+Tools for DevSecOps Pipeline:
+
+1. Checkov
+   - Type: Infrastructure as Code (IaC) Compliance Scanning
+   - Primary Focus: Security and compliance checks for Terraform, CloudFormation, Kubernetes, and more.
+   - Example Compliance Violation: Exposes hard-coded secrets or insecure configurations (e.g., public S3 buckets in Terraform/CloudFormation templates).
+
+2. TFLint
+   - Type: Infrastructure as Code (IaC) Compliance Scanning
+   - Primary Focus: Linting and syntax checking for Terraform files.
+   - Example Compliance Violation: Identifies deprecated resource types, incorrect syntax, or provider-specific issues in Terraform configurations.
+
+3. Clair
+   - Type: AMI/Container Image Scanning
+   - Primary Focus: Scanning for known vulnerabilities in container images.
+   - Example Compliance Violation: Detects CVEs (Common Vulnerabilities and Exposures) in OS packages used within Docker images.
+
+4. Trivy
+   - Type: AMI/Container Image Scanning
+   - Primary Focus: Broader scanning that covers vulnerabilities in container images, OS packages, and open-source software dependencies.
+   - Example Compliance Violation: Detects outdated software versions with known vulnerabilities in application dependencies, OS packages, and Docker containers.
+
+5. AWS Config
+   - Type: AWS Environment Configuration Scanning
+   - Primary Focus: Continuous monitoring of AWS resource configurations.
+   - Example Compliance Violation: Detects non-compliant configurations in security groups (e.g., open ports), encryption policies, or resource tagging policies.
+
+6. ScoutSuite
+   - Type: AWS Environment Configuration Scanning
+   - Primary Focus: Auditing and assessing the security of AWS (and other cloud) environments.
+   - Example Compliance Violation: Highlights security misconfigurations in AWS services like IAM roles, S3 permissions, or overly permissive EC2 security groups.

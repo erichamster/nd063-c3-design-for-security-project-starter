@@ -1,0 +1,9 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+What findings were detected related to the brute force attack?
+- Findings related to brute force attacks typically include detection of multiple failed login attempts or suspicious patterns of authentication activity aimed at gaining unauthorized access to an AWS resource. These findings are flagged by GuardDuty as unusual behavior, especially when coming from unfamiliar IP addresses or geographic locations. The attack might attempt to compromise Amazon EC2 instances or IAM credentials, and GuardDuty assigns severity levels (Low, Medium, or High) based on the attack's success and impact.
+
+Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information?
+- AWS GuardDuty detects such attacks by continuously analyzing data from various AWS logs and services, including AWS CloudTrail logs, VPC Flow Logs, and DNS logs. 
+- GuardDuty uses machine learning models and integrated threat intelligence to identify unusual patterns. For example, it can spot failed login attempts from a known malicious IP address or an unfamiliar region, and flag this as potential brute force activity. 
+- The detection relies on GuardDuty's ability to monitor both network activity and user behavior at the account level in near real-time, without the need for additional infrastructure.

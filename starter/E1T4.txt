@@ -1,0 +1,7 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+## Issue 1 - Lack of Security Layers for Sensitive Data:
+Justification: The architecture shows that both "Free Recipes" and "Secret Recipe Vault" are accessible potentially via the same network routes without clear segmentation or additional security layers. This setup could allow attackers who gain access to less sensitive data to more easily escalate their access to more sensitive data. Ensuring that sensitive data has additional layers of security, such as encryption and restricted access controls, is crucial.
+
+## Issue 2 - Exposed Attack Simulation Instance:
+Justification: The diagram includes an "Attack Simulation Instance" in an untrusted public subnet, which seems to have potential network access to critical internal resources. Placing this type of instance within a less secure or publicly accessible subnet can expose the system to unnecessary risks if the instance is compromised. This setup should ideally be isolated or contained within a more secure and monitored environment to mitigate risk.
